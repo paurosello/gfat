@@ -28,7 +28,7 @@ test_requirements = [
 
 setup(
     name='gfat',
-    version='0.1.0',
+    version='0.1.1',
     description="Generador Ficheros Agencia Tributaria",
     long_description=readme + '\n\n' + history,
     author="Pau Rosello Van Schoor",
