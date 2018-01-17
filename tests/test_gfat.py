@@ -26,6 +26,8 @@ def test_content(response):
     # from bs4 import BeautifulSoup
     # assert 'GitHub' in BeautifulSoup(response.content).title.string
 
+    assert True is not False
+
 
 def test_command_line_interface():
     """Test the CLI."""
