@@ -1,4 +1,3 @@
-
 class Model182:
     """Class to create Model 182 files"""
 

@@ -1,8 +1,10 @@
 # coding=utf-8
 from one_eight_two import DECLARATION_MODEL
+from constants import DECLARED_REGISTER_FIELDS
+from one_eight_two.classes.base_class_182 import Base182
 
 
-class DeclaredRegister:
+class DeclaredRegister(Base182):
     """Declared Register Model on 18/01/2018
         http://www.agenciatributaria.es/static_files/AEAT/Contenidos_Comunes/La_Agencia_Tributaria/Ayuda/Disenyos_de_registro/Ayudas/DR_100_a_199/ficheros/DR182_2016.pdf
 
@@ -81,14 +83,17 @@ class DeclaredRegister:
     """
 
     #Contants
-    register_type = "2"
+    register_type = None
     declaration_model = DECLARATION_MODEL
 
     #Variables
     exercise = None
     declaring_id = None
     declared_id = None
+    representing_declared_id = None
     declared_name = None
+    declared_surname1 = None
+    declared_surname2 = None
     province_code = None
     key = None
     #TODO: document attributes below
@@ -104,6 +109,9 @@ class DeclaredRegister:
     goods_identification = None
     donation_recurrence = None
 
+    def get_name(self):
+        return self.declared_surname1 + " " + self.declared_surname2 + "," + self.declared_name
 
     def __init__(self):
+        super(DeclaredRegister, self).__init__(DECLARED_REGISTER_FIELDS)
         return
